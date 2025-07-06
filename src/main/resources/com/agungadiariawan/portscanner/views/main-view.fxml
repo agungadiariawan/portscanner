@@ -33,7 +33,7 @@
                         <FontAwesomeIconView glyphName="ANGLE_DOWN" size="15.0" />
                     </graphic>
                 </Button>
-                <Label layoutX="329.0" layoutY="8.0" text="Port Cek">
+                <Label layoutX="329.0" layoutY="8.0" text="Port Scanner">
                     <graphic>
                         <FontAwesomeIconView fill="#549055" glyphName="CODE" />
                     </graphic>
