@@ -74,9 +74,9 @@
                   <AnchorPane prefHeight="476.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                       <TableView fx:id="tableviewcheckport" prefHeight="458.0" prefWidth="500.0" VBox.vgrow="ALWAYS">
                           <columns>
-                              <TableColumn fx:id="tblipcek" prefWidth="113.0" sortable="false" text="IP" />
-                              <TableColumn fx:id="tblport" prefWidth="79.0" sortable="false" text="Port" />
-                              <TableColumn fx:id="tblstatus" prefWidth="99.0" sortable="false" text="Status" />
+                              <TableColumn fx:id="tblipcek" prefWidth="113.0"  text="IP" />
+                              <TableColumn fx:id="tblport" prefWidth="79.0"  text="Port" />
+                              <TableColumn fx:id="tblstatus" prefWidth="99.0"  text="Status" />
                           </columns>
                       </TableView>
                   </AnchorPane>
