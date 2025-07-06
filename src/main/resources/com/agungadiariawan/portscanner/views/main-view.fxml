@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" styleClass="root-rounded-border" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.agungadiariawan.portscanner.MainControllers">
+    <top>
+        <AnchorPane prefHeight="35.0" prefWidth="200.0" styleClass="ufx-line-bottom" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="BtnClose" layoutX="15.0" layoutY="8.0" mnemonicParsing="false" onAction="#handelBtnClose" prefHeight="26.0" prefWidth="26.0" styleClass="IconClose" text="X" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="8.0" />
+                <Button fx:id="BtnMinimize" layoutX="41.0" layoutY="8.0" mnemonicParsing="false" onAction="#handelMinimize" prefHeight="26.0" prefWidth="26.0" styleClass="IconMinimize" text="--" AnchorPane.leftAnchor="41.0" AnchorPane.topAnchor="8.0" />
+                <Button fx:id="BtnMaximize" layoutX="67.0" layoutY="8.0" mnemonicParsing="false"  prefHeight="26.0" prefWidth="26.0" styleClass="IconMaximize" text="+" AnchorPane.leftAnchor="67.0" AnchorPane.topAnchor="8.0" />
+                <Button layoutX="466.0" layoutY="4.0" mnemonicParsing="false" styleClass="btn-backgorund-icon">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="GEAR" size="15.0" />
+                    </graphic>
+                </Button>
+                <Button layoutX="434.0" layoutY="4.0" mnemonicParsing="false" styleClass="btn-backgorund-icon">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="SEARCH" size="15.0" />
+                    </graphic>
+                </Button>
+                <Button layoutX="406.0" layoutY="4.0" mnemonicParsing="false" styleClass="btn-backgorund-icon">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="ANGLE_DOWN" size="15.0" />
+                    </graphic>
+                </Button>
+                <Label layoutX="329.0" layoutY="8.0" text="Port Cek">
+                    <graphic>
+                        <FontAwesomeIconView fill="#549055" glyphName="CODE" />
+                    </graphic>
+                </Label>
+            </children>
+        </AnchorPane>
+    </top>
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="540.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane prefHeight="99.0" prefWidth="500.0">
+                      <Button fx:id="btnCheckPortDefault" layoutX="12.0" layoutY="44.0" mnemonicParsing="false" onAction="#handelCheckPortDefault" prefHeight="26.0" prefWidth="126.0" styleClass="ufx-button" text="Cek Port Default">
+                        <graphic>
+                           <FontAwesomeIconView fx:id="iconDefault" glyphName="SEARCH" />
+                        </graphic></Button>
+                      <TextField fx:id="formIpInput" layoutX="13.0" layoutY="11.0" promptText="Masukan IP" styleClass="ufx-text-field" />
+                     <TextField fx:id="formStartPort" layoutX="271.0" layoutY="10.0" prefHeight="26.0" prefWidth="106.0" promptText="Start Antara Port" styleClass="ufx-text-field" />
+                     <TextField fx:id="formEndPort" layoutX="382.0" layoutY="10.0" prefHeight="26.0" prefWidth="106.0" promptText="End Antara Port" styleClass="ufx-text-field" />
+                      <TextField fx:id="formPortInput" layoutX="178.0" layoutY="11.0" prefHeight="26.0" prefWidth="76.0" promptText="Singel Port" styleClass="ufx-text-field" />
+                     <Button fx:id="btnCheckPortAntara" layoutX="280.0" layoutY="44.0" mnemonicParsing="false" onAction="#handelCheckPortAntara" prefHeight="26.0" prefWidth="126.0" styleClass="ufx-button" text="Cek Antara Port">
+                        <graphic>
+                           <FontAwesomeIconView fx:id="iconAntara" glyphName="SEARCH" />
+                        </graphic></Button>
+                     <Button fx:id="btnCheckPortSingel" layoutX="147.0" layoutY="44.0" mnemonicParsing="false" onAction="#handelCheckSingel" prefHeight="26.0" prefWidth="126.0" styleClass="ufx-button" text="Cek Singel Port">
+                        <graphic>
+                           <FontAwesomeIconView fx:id="iconSingel" glyphName="SEARCH" />
+                        </graphic>
+                     </Button>
+                     <Button fx:id="btnClearForm" layoutX="414.0" layoutY="43.0" mnemonicParsing="false" onAction="#handelClearFormPort" prefHeight="26.0" prefWidth="75.0" styleClass="ufx-button" text="Hapus">
+                        <graphic>
+                           <FontAwesomeIconView fx:id="iconClear" glyphName="TRASH" />
+                        </graphic>
+                     </Button>
+                     <Separator layoutX="260.0" layoutY="10.0" orientation="VERTICAL" prefHeight="26.0" prefWidth="6.0" />
+                  </AnchorPane>
+                  <AnchorPane prefHeight="476.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                      <TableView fx:id="tableviewcheckport" prefHeight="458.0" prefWidth="500.0" VBox.vgrow="ALWAYS">
+                          <columns>
+                              <TableColumn fx:id="tblipcek" prefWidth="113.0" sortable="false" text="IP" />
+                              <TableColumn fx:id="tblport" prefWidth="79.0" sortable="false" text="Port" />
+                              <TableColumn fx:id="tblstatus" prefWidth="99.0" sortable="false" text="Status" />
+                          </columns>
+                      </TableView>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+        </AnchorPane>
+    </center>
+    <bottom>
+
+        <AnchorPane prefHeight="25.0" prefWidth="200.0" styleClass="ufx-line-top" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="notifLabel" layoutX="9.0" layoutY="4.0" style="-fx-text-fill: #666666" text="Info: Lindungi IP Anda dengan menutup port yang tidak digunakan secara publik.">
+                    <graphic>
+                        <FontAwesomeIconView fx:id="notifIcon" fill="#666666" glyphName="INFO_CIRCLE" />
+                    </graphic>
+                </Label>
+            </children></AnchorPane>
+    </bottom>
+</BorderPane>
